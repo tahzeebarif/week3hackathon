@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background-color: #f5f5f3;
+    color: #1a1a1a;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+  a { text-decoration: none; color: inherit; }
+}
+
+@layer components {
+  .btn-dark {
+    @apply inline-block bg-[#1a1a1a] text-white px-7 py-3 text-[11px] tracking-[2px] uppercase font-medium border border-[#1a1a1a] transition-colors duration-200 cursor-pointer hover:bg-[#4a4a4a] hover:border-[#4a4a4a];
+  }
+  .btn-outline {
+    @apply inline-block bg-transparent text-[#1a1a1a] px-7 py-3 text-[11px] tracking-[2px] uppercase font-medium border border-[#1a1a1a] transition-colors duration-200 cursor-pointer hover:bg-[#1a1a1a] hover:text-white;
+  }
+  .input-field {
+    @apply w-full px-3 py-2.5 border border-[#e0ddd8] bg-white text-sm outline-none focus:border-[#1a1a1a] transition-colors;
+  }
+  .nav-link {
+    @apply text-[11px] tracking-[2px] uppercase text-[#1a1a1a] hover:text-[#8a8a8a] transition-colors cursor-pointer bg-transparent border-none;
+  }
+  .label-sm {
+    @apply text-[10px] tracking-[2px] uppercase text-[#8a8a8a];
+  }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #f5f5f3; }
+::-webkit-scrollbar-thumb { background: #d0cdc8; border-radius: 2px; }
