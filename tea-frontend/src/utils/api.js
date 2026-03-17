@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: 'https://backend-eight-nu-61.vercel.app/api' });
+const api = axios.create({ baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api' });
 
 // Attach token to every request
 api.interceptors.request.use(config => {
